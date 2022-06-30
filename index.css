@@ -1,5 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
 
-html {
+body {
   font-family: "Poppins";
+}
+
+.shortenLinkBox {
+  background-image: url("./images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.boostLinks {
+  background-image: url("./images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h5 {
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-weight: 300;
+  margin: 4px 0px;
 }

@@ -26,7 +26,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-[#f0f1f6]">
     <header>
       <div class="flex justify-between items-center p-8">
         <img src="./images/logo.svg" alt="logo" class="" />
@@ -34,32 +34,163 @@
       </div>
     </header>
 
-    <div>
-      <img
-        src="./images/illustration-working.svg"
-        alt="ilustration-working"
-        class="w-full left-10"
-      />
-    </div>
-    Features Pricing Resources Login Sign Up More than just shorter links Build
-    your brand’s recognition and get detailed insights on how your links are
-    performing. Get Started Shorten a link here... Shorten It! Advanced
-    Statistics Track how your links are performing across the web with our
-    advanced statistics dashboard. Brand Recognition Boost your brand
-    recognition with each click. Generic links don’t mean a thing. Branded links
-    help instil confidence in your content. Detailed Records Gain insights into
-    who is clicking your links. Knowing when and where people engage with your
-    content helps inform better decisions. Fully Customizable Improve brand
-    awareness and content discoverability through customizable links,
-    supercharging audience engagement. Boost your links today Get Started
-    Features Link Shortening Branded Links Analytics Resources Blog Developers
-    Support Company About Our Team Careers Contact
+    <main class="container p-4">
+      <section class="relative">
+        <img
+          src="./images/illustration-working.svg"
+          alt="ilustration-working"
+          class="w-full"
+        />
+      </section>
+
+      <section class="flex flex-col justify-center">
+        <h3 class="text-3xl text-center font-bold text-[#3b3054] mt-8 mb-2">
+          More than just shorter links
+        </h3>
+        <p class="text-center">
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button
+          class="bg-[#2acfcf] text-white font-bold px-10 py-3 rounded-full w-2/3 self-center mt-4 mb-8"
+        >
+          Get Started
+        </button>
+      </section>
+
+      <section class="flex flex-col shortenLinkBox p-6 bg-[#3b3054] rounded-lg">
+        <input
+          type="text"
+          placeholder="Shorten a link here..."
+          class="p-3 rounded-lg"
+        />
+        <button
+          class="bg-[#2acfcf] text-white font-bold px-10 py-3 rounded-lg mt-4"
+        >
+          Shorten it!
+        </button>
+      </section>
+
+      <section class="mt-20 mb-20">
+        <h3 class="text-[#3b3054] text-3xl font-bold text-center mb-6">
+          Advanced Statistics
+        </h3>
+        <p class="text-[#9e9aa7] text-center text-xl">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </section>
+
+      <section class="p-4 my-14">
+        <section
+          class="relative flex flex-col justify-center items-center bg-white pb-8 pt-14"
+        >
+          <div class="bg-[#3b3054] w-20 p-5 rounded-full absolute -top-10">
+            <img
+              src="./images/icon-brand-recognition.svg"
+              alt="icon-brand-recognition"
+              class="w-full"
+            />
+          </div>
+          <h4 class="text-[#3b3054] font-bold text-2xl mt-6 mb-4">
+            Brand Recognition
+          </h4>
+          <p class="text-center mx-6 text-[#9e9aa7] font-medium">
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </section>
+        <div class="mx-auto bg-[#2acfcf] w-2 h-16"></div>
+        <section
+          class="relative flex flex-col justify-center items-center bg-white pb-8 pt-14 mt-4"
+        >
+          <div class="bg-[#3b3054] w-20 p-5 rounded-full absolute -top-10">
+            <img
+              src="./images/icon-detailed-records.svg"
+              alt="icon-brand-recognition"
+              class="w-full"
+            />
+          </div>
+          <h4 class="text-[#3b3054] font-bold text-2xl mt-6 mb-4">
+            Detailed Records
+          </h4>
+          <p class="text-center mx-6 text-[#9e9aa7] font-medium">
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </p>
+        </section>
+        <div class="mx-auto bg-[#2acfcf] w-2 h-16"></div>
+        <section
+          class="relative flex flex-col justify-center items-center bg-white pb-8 pt-14 mt-4"
+        >
+          <div class="bg-[#3b3054] w-20 p-5 rounded-full absolute -top-10">
+            <img
+              src="./images/icon-fully-customizable.svg"
+              alt="icon-brand-recognition"
+              class="w-full"
+            />
+          </div>
+          <h4 class="text-[#3b3054] font-bold text-2xl mt-6 mb-4">
+            Fully Customizable
+          </h4>
+          <p class="text-center mx-6 text-[#9e9aa7] font-medium">
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </section>
+      </section>
+    </main>
+    <section
+      class="flex flex-col justify-center items-center bg-[#3b3054] boostLinks p-10 h-72"
+    >
+      <h3 class="text-white font-bold text-3xl">Boost your links today</h3>
+      <button
+        class="bg-[#2acfcf] text-white font-bold px-10 py-3 rounded-full mt-4"
+      >
+        Get Started
+      </button>
+    </section>
+
+    <footer
+      class="flex flex-col justify-center items-center text-white bg-[#232127]"
+    >
+      <div class="w-3/4 py-14">
+        <h3 class="font-bold text-4xl mb-10 text-center">Shortly</h3>
+        <section>
+          <h5>Features</h5>
+          <p>Link Shortening</p>
+          <p>Branded Links</p>
+          <p>Analytics</p>
+        </section>
+
+        <section>
+          <h5>Resources</h5>
+          <p>Blog</p>
+          <p>Developers</p>
+          <p>Support</p>
+        </section>
+
+        <section>
+          <h5>Company</h5>
+          <p>About</p>
+          <p>Our team</p>
+          <p>Careers</p>
+          <p>Contact</p>
+        </section>
+        <div class="flex justify-center items-center mt-10">
+          <img class="mx-3" src="./images/icon-facebook.svg" alt="" />
+          <img class="mx-3" src="./images/icon-twitter.svg" alt="" />
+          <img class="mx-3" src="./images/icon-pinterest.svg" alt="" />
+          <img class="mx-3" src="./images/icon-instagram.svg" alt="" />
+        </div>
+      </div>
+    </footer>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Beto Martinez</a>.
     </div>
     <script src="./index.js"></script>
   </body>
