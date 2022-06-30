@@ -30,12 +30,36 @@
     <header>
       <div class="flex justify-between items-center p-8">
         <img src="./images/logo.svg" alt="logo" class="" />
-        <img src="./images/bars-solid.svg" alt="menu-icon" class="w-6" />
+        <img
+          src="./images/bars-solid.svg"
+          alt="menu-icon"
+          class="w-6"
+          id="btnMenu"
+        />
       </div>
     </header>
 
     <main class="container p-4">
-      <section class="relative">
+      <div
+        id="menu"
+        class="flex flex-col justify-center text-center bg-[#3b3054] rounded-lg p-4 text-white menu"
+      >
+        <div>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Resources</p>
+        </div>
+        <div class="bg-[#9e9aa7] w-4/5 h-px opacity-40"></div>
+        <div class="text-center">
+          <p>Login</p>
+          <button
+            class="bg-[#2acfcf] w-3/4 text-white font-bold px-10 py-3 rounded-full mt-4 mb-8"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+      <section class="relative" id="imgWorking">
         <img
           src="./images/illustration-working.svg"
           alt="ilustration-working"
