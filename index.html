@@ -33,7 +33,7 @@
         <img
           src="./images/bars-solid.svg"
           alt="menu-icon"
-          class="w-6"
+          class="cursor-pointer w-6"
           id="btnMenu"
         />
       </div>
@@ -42,7 +42,7 @@
     <main class="container p-4">
       <div
         id="menu"
-        class="flex flex-col justify-center text-center bg-[#3b3054] rounded-lg p-4 text-white menu"
+        class="flex flex-col justify-center text-center bg-[#3b3054] rounded-lg p-4 text-white menu hidden"
       >
         <div>
           <p>Features</p>
@@ -59,13 +59,7 @@
           </button>
         </div>
       </div>
-      <section class="relative" id="imgWorking">
-        <img
-          src="./images/illustration-working.svg"
-          alt="ilustration-working"
-          class="w-full"
-        />
-      </section>
+      <section id="imgWorking" class="w-96 h-96"></section>
 
       <section class="flex flex-col justify-center">
         <h3 class="text-3xl text-center font-bold text-[#3b3054] mt-8 mb-2">
@@ -87,12 +81,31 @@
           type="text"
           placeholder="Shorten a link here..."
           class="p-3 rounded-lg"
+          id="linkInput"
         />
+        <p id="error" class="text-red-500 italic mt-4 hidden"></p>
         <button
           class="bg-[#2acfcf] text-white font-bold px-10 py-3 rounded-lg mt-4"
+          id="btnShorten"
         >
           Shorten it!
         </button>
+      </section>
+
+      <section class="" id="links">
+        <div class="bg-white rounded-lg my-10">
+          <p class="text-xl p-4">https://www.frontendmentor.io</p>
+          <div class="h-px bg-[#9e9aa7] opacity-40"></div>
+          <div class="p-4">
+            <p class="text-[#2acfcf] text-xl">https://rel.ink/k4lKyk</p>
+            <button
+              class="bg-[#2acfcf] w-full text-white font-bold px-10 py-3 rounded-lg mt-4"
+              id="btnShorten"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="mt-20 mb-20">

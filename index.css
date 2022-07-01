@@ -4,6 +4,12 @@ body {
   font-family: "Poppins";
 }
 
+#imgWorking {
+  background-image: url("./images/illustration-working.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .shortenLinkBox {
   background-image: url("./images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
@@ -36,4 +42,8 @@ footer p {
 
 .menu p {
   margin: 18px 0px;
+}
+
+.placeholderRed::placeholder {
+  color: #ff0000;
 }
