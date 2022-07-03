@@ -8,9 +8,8 @@ body {
   background-image: url("./images/illustration-working.svg");
   background-size: contain;
   background-repeat: no-repeat;
+
   width: 100%;
-  height: 220px;
-  background-position: 50px;
 }
 
 .shortenLinkBox {
