@@ -38,7 +38,7 @@ $btnShorten.addEventListener("click", async () => {
     $linkInput.style.outline = "inherit";
     const html = `
   <div class="bg-white rounded-lg my-10">
-  <p class="text-xl p-4">${$linkInput.value}</p>
+  <p class="text-xl p-4 text-ellipsis overflow-hidden">${$linkInput.value}</p>
   <div class="h-px bg-[#9e9aa7] opacity-40"></div>
   <div class="p-4">
     <p class="text-[#2acfcf] text-xl">${shortenUrl}</p>
@@ -54,6 +54,7 @@ $btnShorten.addEventListener("click", async () => {
     $linkInput.value = "";
     $linksContainer.insertAdjacentHTML("beforeend", html);
   } catch (error) {
+    console.log(error);
     throw error;
   }
 });
