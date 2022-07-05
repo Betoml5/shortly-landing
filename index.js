@@ -5,6 +5,22 @@ const $linkInput = document.querySelector("#linkInput");
 const $btnShorten = document.querySelector("#btnShorten");
 const $errorMsg = document.querySelector("#error");
 const $linksContainer = document.querySelector("#links");
+const $textsFromContainers = document.querySelectorAll(".textClip");
+const $btnsCopy = document.querySelectorAll(".btnCopy");
+
+$textsFromContainers.forEach((item) => {});
+
+$btnsCopy.forEach((item) => {
+  item.addEventListener("click", () => {
+    console.log("");
+    const textShorten = item.parentNode.children.item(0).textContent;
+    navigator.clipboard.writeText(textShorten);
+    console.log("copied");
+    console.log(
+      navigator.clipboard.readText().then((text) => console.log(text))
+    );
+  });
+});
 
 const API_URL = "https://api.shrtco.de/v2";
 
@@ -37,24 +53,23 @@ $btnShorten.addEventListener("click", async () => {
     const shortenUrl = await shorten($linkInput.value);
     $linkInput.style.outline = "inherit";
     const html = `
-  <div class="bg-white rounded-lg my-10">
-  <p class="text-xl p-4 text-ellipsis overflow-hidden">${$linkInput.value}</p>
-  <div class="h-px bg-[#9e9aa7] opacity-40"></div>
-  <div class="p-4">
-    <p class="text-[#2acfcf] text-xl">${shortenUrl}</p>
-    <button
-      class="bg-[#2acfcf] w-full text-white font-bold px-10 py-3 rounded-lg mt-4"
-      id="btnShorten"
-    >
-      Copy
-    </button>
-  </div>
-</div>
+        <div class="bg-white rounded-lg my-10">
+          <p class="text-xl p-4 text-ellipsis overflow-hidden textClip" aria-valuetext="${$linkInput}" >${$linkInput.value}</p>
+          <div class="h-px bg-[#9e9aa7] opacity-40"></div>
+          <div class="p-4">
+            <p class="text-[#2acfcf] text-xl">${shortenUrl}</p>
+            <button
+              class="bg-[#2acfcf] w-full text-white font-bold px-10 py-3 rounded-lg mt-4 btnCopy"
+              id="btnShorten"
+            >
+              Copy
+            </button>
+          </div>
+      </div>
   `;
     $linkInput.value = "";
     $linksContainer.insertAdjacentHTML("beforeend", html);
   } catch (error) {
-    console.log(error);
     throw error;
   }
 });
@@ -66,9 +81,12 @@ const shorten = async (url) => {
     });
 
     const data = await response.json();
-    console.log(data);
     return data.result.short_link;
   } catch (error) {
     throw error;
   }
+};
+
+const copyClipboard = () => {
+  const text = document.aria;
 };
