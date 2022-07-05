@@ -49,3 +49,16 @@ footer p {
 .placeholderRed::placeholder {
   color: #ff0000;
 }
+
+@media screen and (min-width: 1024px) {
+  footer h5 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  footer p {
+    font-weight: 300;
+    margin: 4px 0px;
+  }
+}
