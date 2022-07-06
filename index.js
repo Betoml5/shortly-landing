@@ -84,6 +84,7 @@ const shorten = async (url) => {
     const data = await response.json();
     return data.result.short_link;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
@@ -93,13 +94,14 @@ const addNewItemsToClipBoard = () => {
 
   $btnsCopy.forEach((item) => {
     item.addEventListener("click", () => {
-      console.log(item);
       const textShorten = item.parentNode.children.item(0).textContent;
       navigator.clipboard.writeText(textShorten);
       console.log("copied");
       console.log(
         navigator.clipboard.readText().then((text) => console.log(text))
       );
+      item.classList.add("btnCopyCopied");
+      item.textContent = "Copied!";
     });
   });
 };

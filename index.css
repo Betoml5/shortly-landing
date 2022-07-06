@@ -50,6 +50,10 @@ footer p {
   color: #ff0000;
 }
 
+.btnCopyCopied {
+  background-color: #3b3054 !important;
+}
+
 @media screen and (min-width: 1024px) {
   footer h5 {
     font-weight: 500;
