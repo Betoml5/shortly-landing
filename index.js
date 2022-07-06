@@ -69,6 +69,7 @@ $btnShorten.addEventListener("click", async () => {
   `;
     $linkInput.value = "";
     $linksContainer.insertAdjacentHTML("beforeend", html);
+    addNewItemsToClipBoard();
   } catch (error) {
     throw error;
   }
@@ -87,6 +88,18 @@ const shorten = async (url) => {
   }
 };
 
-const copyClipboard = () => {
-  const text = document.aria;
+const addNewItemsToClipBoard = () => {
+  const $btnsCopy = document.querySelectorAll(".btnCopy");
+
+  $btnsCopy.forEach((item) => {
+    item.addEventListener("click", () => {
+      console.log(item);
+      const textShorten = item.parentNode.children.item(0).textContent;
+      navigator.clipboard.writeText(textShorten);
+      console.log("copied");
+      console.log(
+        navigator.clipboard.readText().then((text) => console.log(text))
+      );
+    });
+  });
 };
